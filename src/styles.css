@@ -11,3 +11,7 @@ body{
     font-family:'Courier New', Courier, monospace;
     font-size: 18px;
 }
+
+a {
+    text-decoration: none;
+}
