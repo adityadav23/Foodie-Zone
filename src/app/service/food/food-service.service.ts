@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import IFood from 'src/app/shared/models/Food';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class FoodServiceService {
 
   constructor() { }
 
-  getAll(){
+  getAll(): IFood[]{
     return [
       {
         id:'1',

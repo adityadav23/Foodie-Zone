@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodServiceService } from '../service/food/food-service.service';
+import IFood from '../shared/models/Food';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,6 @@ export class HomeComponent implements OnInit {
   constructor(private foodService: FoodServiceService){
     this.Food =  foodService.getAll()
   }
-  Food: any;
+  Food: IFood[];
 
 }
