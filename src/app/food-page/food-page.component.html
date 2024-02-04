@@ -36,8 +36,8 @@
             </span>
           </div>
       
-          <div *ngIf="!cart.items.length; else addedToCart">
-              <button (click)="addToCart(food)">Add to Cart</button>
+          <div *ngIf="cart.items">
+              <button (click)="addToCart(food)" routerLink="/cart">Add to Cart</button>
           </div>
     </div>
 </div>
@@ -52,6 +52,6 @@
         </button>
     </div>
 </ng-template> -->
-<ng-template #addedToCart>
+<!-- <ng-template #addedToCart>
     <button (click)="addToCart(food)">Added to Cart</button>
-</ng-template>
+</ng-template> -->

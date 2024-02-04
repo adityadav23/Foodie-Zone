@@ -149,6 +149,6 @@ export class FoodServiceService {
     if(food){
       return food['tags']
     }
-    return []
+    return [];
   }
 }

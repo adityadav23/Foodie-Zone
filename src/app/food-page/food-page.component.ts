@@ -26,7 +26,6 @@ export class FoodPageComponent implements OnInit {
         })
         this.cart = this.cartService.getCart()
         if(this.cart){
-          console.log(this.cart)
         }
   }
   

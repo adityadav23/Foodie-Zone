@@ -26,6 +26,8 @@ export class CartService {
     this.cart.items.find(item=> {
       if(item.food.id == foodId){
         item.quantity = itemQuantity
+        // item.price = itemQuantity * item.food.price;
+
       }
     })     
   }
