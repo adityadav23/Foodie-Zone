@@ -1,0 +1,57 @@
+<div class="container">
+     <img [src]="food.imageUrl" [alt]="food.name">
+     <div class="details">
+       <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favorite {{food.favorite ? '' : 'not'}}"> ❤ </span>
+       </div>
+        <star-rating 
+            [value]="food.stars" 
+            [totalstars]="5" 
+            checkedcolor="red" 
+            uncheckedcolor="black" 
+            size="24px"
+            [readonly]="true">
+        </star-rating>
+        <!-- <div class="product-item-footer"> -->
+            <div class="origins">
+                <span *ngFor="let origin of food?.origins">
+                    {{origin}}
+                </span>
+            </div>
+            <div class="tags">
+                <app-tags [foodId]="food.id"></app-tags>
+            </div>
+            <div class="cook-time">
+            <span>
+              Time to cook about <strong>{{food.cookTime}}</strong> minutes
+            </span>
+          </div>
+      
+          <div class="price">
+            <span>
+              {{food.price | currency}}
+            </span>
+          </div>
+      
+          <div *ngIf="!cart.items.length; else addedToCart">
+              <button (click)="addToCart(food)">Add to Cart</button>
+          </div>
+    </div>
+</div>
+<!-- <ng-template #updateCart>
+    <div>
+        <button (click)="reduceQuantity(food)">-1</button>
+        {{food.name}}
+        <button (click)="addQuantity(food)">+1</button>
+        <button (click)="removeFromCart(food)" >
+            <img class="delete-button" src="./assets/delete.png">
+            
+        </button>
+    </div>
+</ng-template> -->
+<ng-template #addedToCart>
+    <button (click)="addToCart(food)">Added to Cart</button>
+</ng-template>

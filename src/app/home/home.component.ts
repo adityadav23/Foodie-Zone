@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FoodServiceService } from '../service/food/food-service.service';
 import { StarRatingComponent } from 'ng-starrating';
 import IFood from '../shared/models/Food';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
   constructor(
     private foodService: FoodServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
     ){
       this.Food =  foodService.getAll()
     }
