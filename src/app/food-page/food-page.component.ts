@@ -25,8 +25,7 @@ export class FoodPageComponent implements OnInit {
           }
         })
         this.cart = this.cartService.getCart()
-        if(this.cart){
-        }
+        
   }
   
   addToCart(food: IFood){
