@@ -1,6 +1,7 @@
-# FoodOrder
+# [FoodOrder](https://adityadav23.github.io/foodie-zone/):https://adityadav23.github.io/foodie-zone/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+Deployed on:  
 
 ## Development server
 
